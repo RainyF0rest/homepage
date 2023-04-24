@@ -1,0 +1,56 @@
+#word 
+{
+    font-family:monospace;
+}
+
+.word 
+{
+    font-family:monospace;
+}
+.weekday
+{
+    flex-basic: 200px;
+}
+
+#forecast
+{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin: 3%;
+    background-color: rgb(168, 190, 199);
+    text-align: right;
+    padding: 3%;
+    border-radius: 15px;
+    font-family:monospace
+}
+#today
+{
+    background-color: rgba(195, 216, 220, 0.7);
+    text-align: center;
+    border-radius: 15px;
+    padding: 2%;
+    margin: 3%;
+    font-family:monospace
+}
+#blue
+{
+    background-color: rgb(165, 192, 198);
+}
+span
+{
+    margin : 1%;
+}
+.icon
+{
+    margin : 1%;
+}
+.bar
+{
+    background-color: rgb(165, 192, 198);
+}
+
+.test
+{
+    background-color: rgb(190, 202, 226);
+}

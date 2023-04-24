@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forcast</title>
+    <link rel="stylesheet" href="weatherForcast_style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body style = "background-color : rgb(131, 164, 169);">
+<!--top bar & nav-->
+<nav class="navbar navbar-expand-lg bar" id = "navBar">
+    <div class="container-fluid">
+      <p class="navbar-brand" href="#" id = "word">Weather Forcast</p>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <p  class="nav-link active word" aria-current="page" id = "curTime" ></p>
+          </li>
+          <li class="nav-item">
+            <p  class="nav-link word" id = "curHour" ></p>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span id = "zone" class = "word" ></span>
+            </a>
+            <ul class="dropdown-menu" >
+              <li><a class="dropdown-item word" onclick = "getWeather('Europe%2FLondon')" href="#">Europe/London</a></li>
+              <li><a class="dropdown-item word" onclick = "getWeather('Europe%2FBerlin')" href="#">Europe/Berlin </a></li>
+              <li><a class="dropdown-item word" onclick = "getWeather('Europe%2FMoscow')" href="#">Europe/Moscow </a></li>
+              <li><a class="dropdown-item word" onclick = "getWeather('Asia%2FBangkok')" href="#">Asia/Bangkok </a></li>
+              <li><a class="dropdown-item word" onclick = "getWeather('Asia%2FSingapore')" href="#">Asia/Singapore </a></li>
+              <li><a class="dropdown-item word" onclick = "getWeather('Asia%2FTokyo')" href="#">Asia/Tokyo </a></li>
+              <li><a class="dropdown-item word" onclick = "getWeather('America%2FLos_Angeles')" href="#">America/Los_Angeles </a></li>
+              <li><a class="dropdown-item word" onclick = "getWeather('America%2FChicago')" href="#">America/Chicago </a></li>
+              <li><a class="dropdown-item word" onclick = "getWeather('Australia%2FSydney')" href="#">Australia/Sydney </a></li>
+              <li><a class="dropdown-item word" onclick = "getWeather('auto')" href="#">Auto </a></li>
+            </ul>
+          </li>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <span id = "curTime" ></span>
+    <span id = "curHour" ></span>
+    <span id = "zone" ></span>
+<!--weather today-->
+    <div id = "today" ></div>
+<!--day foresee-->
+    <div id = "6days"></div>
+
+<script src = "weatherForcast.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</body>
+</html>
