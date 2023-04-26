@@ -1,0 +1,4 @@
+function bmiCal( weight , height )
+{
+    
+}
