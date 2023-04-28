@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="EN"> 
 <head>
 <meta lang="EN" charset="utf-8">
 <title>BMI Calculator</title>
@@ -7,17 +8,20 @@
 <body>
 <div>
 <h1>BMI Calculator</h1>
+<div id = "result">
     <iframe src="https://giphy.com/embed/Zu6AATBpCeUzm" width="366" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-    <h3>How do I know If I am fat or not </h3>
-
+    <p >↑This is me in cat form↑</p>
+    <h3>Let see if you are fat or not </h3>
+</div>
 </div>
 <div>
     <form>
-       <p>Height :  <input type = "text" id = "h"></p>
-       <p>Weight : <input type = "text" id = "w"></p>
+       <p>Height :  <input type = "text" id = "h" onchange="bmiCal()"> cm </p>
+       <p>Weight : <input type = "text" id = "w" onchange="bmiCal()"> kg </p>
        <p> BMI : <input type = "text" id = "BMI" readonly ></p>
     </form>
-    <button class="tryMe" onclick="">Try me</button>
+    //<button class="tryMe" onclick="">Try me</button>
 </div>
     <script src = "BMICal.js"></script>
 </body>
+</html>
