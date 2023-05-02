@@ -1,7 +1,7 @@
-async function getWeather(timezone)
+async function getWeather(lat , long , timezone)
 {
     //download API , tansform into Json 
-    const WEATHER = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=22.28&longitude=114.17&hourly=temperature_2m,precipitation_probability,weathercode,uv_index&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_probability_max&timezone=${timezone}`)
+    const WEATHER = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${long}&hourly=temperature_2m,precipitation_probability,weathercode,uv_index&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_probability_max&timezone=${timezone}`)
     const Json = await WEATHER.json()
     console.log(Json);
 
@@ -99,7 +99,14 @@ async function getWeather(timezone)
 
     //time & zone
     document.getElementById("curTime").innerHTML = new Date(today).toLocaleString ( 'en-US' , options);   
-    document.getElementById("zone").innerHTML = Json.timezone;  
+    document.getElementById("zone").innerHTML = Json.timezone;
+    
+    const asiaHK = "Asia/Hong Kong"
+
+    if (lat == 22.8 && long == 114.17)
+    {
+        document.getElementById("zone").innerHTML = asiaHK;
+    }
 
     //clock update continguosly
     setInterval( getTime, 1000 ) ;
@@ -285,4 +292,4 @@ async function getWeather(timezone)
 
 }
 
-getWeather('auto');
+getWeather('22.8' , '114.17', 'auto');

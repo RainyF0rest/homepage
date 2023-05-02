@@ -10,7 +10,7 @@ function bmiCal()
     const plump = '<iframe src="https://giphy.com/embed/lN9amhr8GZMhG" width="480" height="419" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p>↑Overweight ! Start your diet or you may suffer with health issue !↑</p>'
     const alien = '<iframe src="https://giphy.com/embed/PApUlVfEFmZAQ" width="272" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p>↑Are you really a human being ? ↑</p>'
     const bmi = w/((h*h));
-    console.log(`BMI : ${bmi}`);
+    
     document.getElementById("BMI").value = bmi;
 
     if( bmi < 18.5 && bmi >= 10 )
