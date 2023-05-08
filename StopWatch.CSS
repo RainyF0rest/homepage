@@ -1,0 +1,20 @@
+span
+{
+    margin: 1%;
+}
+button
+{
+    margin: 2%;
+    padding: 1%;
+    border-radius: 35%;
+}
+.wrapper
+{
+    background-color: rgb(50, 90, 125)9, 54);
+}
+#timer
+{
+    background-color: rgb(169, 242, 242);
+}
+/*Why 1.empty div cannot archieve color 
+      2. how to archieve centre alignment on all div / html?*/
