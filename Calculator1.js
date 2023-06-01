@@ -2,22 +2,10 @@ window.onload = function ()
 {
     var value = 0;
     var result = false;
-    const plus = "+";
-    const minus = "-";
-    const times = "*";
-    const divide = "/";
-    const dot = ".";
-
-    const one = "1";
-    const two = "2";
-    const three = "3";
-    const four = "4";
-    const five = "5";
-    const six ="6";
-    const seven = "7";
-    const eight = "8";
-    const nine = "9";
-    const zero = "0";
+    var numNode = document.querySelectorAll(".num");
+    console.log(numNode);
+    var operatorNode = document.querySelectorAll(".operator");
+    console.log(operatorNode);
 
     const buttonOne = document.getElementById("one");
     const buttonTwo = document.getElementById("two");
@@ -41,11 +29,29 @@ window.onload = function ()
     const displayValue = document.getElementById("display");
     const buttonClear = document.getElementById("clear");
 
+
+    function buttonSimilator()
+    {
+        
+        for (var i = 0, n = numNode.length; i < n; i ++)
+        {
+            numNode[i].addEventListener("click",
+    function append(e)
+    {
+        displayModi();
+        resultChecker();
+        value += numNode[i].innerHTML;
+        show();
+    })
+        }
+    }
+
     function resultChecker()
     {
-        if ( result === "true")
+        if ( result === true)
         {
-            
+            value = "";
+            result = false;
         }
     }
 
@@ -65,90 +71,6 @@ window.onload = function ()
     buttonClear.onclick = function clear()
     {
         value = "";
-        show();
-    }
-
-    buttonOne.onclick = function appendOne()
-    {
-        displayModi();
-        value += one;
-        console.log(value);
-        show();
-    }
-
-    buttonTwo.onclick = function appendTwo()
-    {
-        displayModi();
-        value += two;
-        console.log(value);
-        show();
-    }
-
-    buttonThree.onclick = function appendThree()
-    {
-        displayModi();
-        value += three;
-        console.log(value);
-        show();
-    }
-
-
-    buttonFour.onclick = function appendFour()
-    {
-        displayModi();
-        value += four;
-        console.log(value);
-        show();
-    }
-
-
-    buttonFive.onclick = function appendFive()
-    {
-        displayModi();
-        value += five;
-        console.log(value);
-        show();
-    }
-    
-    buttonSix.onclick = function appendSix()
-    {
-        displayModi();
-        value += six;
-        console.log(value);
-        show();
-    }
-        
-    buttonSeven.onclick = function appendSeven()
-    {
-        displayModi();
-        value += seven;
-        console.log(value);
-        show();
-    }
-
-            
-    buttonEight.onclick = function appendEight()
-    {
-        displayModi();
-        value += eight;
-        console.log(value);
-        show();
-    }
-
-            
-    buttonNine.onclick = function appendNine()
-    {
-        displayModi();
-        value += nine;
-        console.log(value);
-        show();
-    }
-
-    buttonZero.onclick = function appendZero()
-    {
-        displayModi();
-        value += zero;
-        console.log(value);
         show();
     }
 
@@ -180,14 +102,6 @@ window.onload = function ()
     {
         displayModi();
         value += divide;
-        console.log(value);
-        show();
-    }
-
-    buttonFloat.onclick = function appendFloat()
-    {
-        displayModi();
-        value += dot;
         console.log(value);
         show();
     }
