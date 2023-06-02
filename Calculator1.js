@@ -7,42 +7,52 @@ window.onload = function ()
     var operatorNode = document.querySelectorAll(".operator");
     console.log(operatorNode);
 
-    const buttonOne = document.getElementById("one");
-    const buttonTwo = document.getElementById("two");
-    const buttonThree = document.getElementById("three");
-    const buttonFour = document.getElementById("four");
-    const buttonFive = document.getElementById("five");
-    
-    const buttonSix = document.getElementById("six");
-    const buttonSeven = document.getElementById("seven");
-    const buttonEight = document.getElementById("eight"); 
-    const buttonNine = document.getElementById("nine");
-    const buttonZero = document.getElementById("zero");
-
-    const buttonPlus = document.getElementById("plus");
-    const buttonMinus = document.getElementById("minus");
-    const buttonTimes = document.getElementById("multiply");
-    const buttonDivide = document.getElementById("divide");
-
-    const buttonFloat = document.getElementById("float");
     const buttonEqual = document.getElementById("equal");
     const displayValue = document.getElementById("display");
     const buttonClear = document.getElementById("clear");
+    const buttonFloat = document.getElementById("float");
 
 
-    function buttonSimilator()
+    function numPadSimilator()
     {
         
         for (var i = 0, n = numNode.length; i < n; i ++)
         {
-            numNode[i].addEventListener("click",
-    function append(e)
+            numNode[i].addEventListener("click", function append(e)
     {
-        displayModi();
         resultChecker();
-        value += numNode[i].innerHTML;
+        value += e.target.innerHTML;
         show();
     })
+        }
+    }
+
+    function oneDotOnly()
+    {   
+        var countDot = 0 ;
+        for (var i = 0 , n = value.length; i < n ; i++)
+        {
+            if (value[i] === ".")
+            {
+                countDot +=1;
+            }
+            if (value[i] === "+" || value[i] === "-" || value[i] === "*" || value[i] === "/")
+            {
+                if (countDot > 0)
+                {
+                    counDot -= 1 ;
+                }
+            }
+
+        }
+
+        if (countDot >0 )
+        {
+            return false;
+        }
+        else 
+        {
+            return true;
         }
     }
 
@@ -65,44 +75,36 @@ window.onload = function ()
 
     function show()
     {
+        displayModi();
         displayValue.value = value ;
     }
+
+    buttonFloat.onclick = function float()
+    {
+        function lastChar()
+        {
+            if (value[value.length - 1] == "+" || value[value.length - 1] == "-" || value[value.length - 1] == "/" || value[value.length - 1] == "*") 
+                {
+                    return false;
+                }
+            else 
+            {
+                return true;
+            }
+        }
+
+        if (oneDotOnly() == true && lastChar() == true )
+        {
+            value += buttonFloat.innerHTML;
+        }
+        show();
+    }
+
+
 
     buttonClear.onclick = function clear()
     {
         value = "";
-        show();
-    }
-
-    buttonPlus.onclick = function appendPlus()
-    {
-        displayModi();
-        value += plus;
-        console.log(value);
-        show();
-    }
-
-    buttonMinus.onclick = function appendMinus()
-    {
-        displayModi();
-        value += minus;
-        console.log(value);
-        show();
-    }
-
-    buttonTimes.onclick = function appendTimes()
-    {
-        displayModi();
-        value += times;
-        console.log(value);
-        show();
-    }
-
-    buttonDivide.onclick = function appendDivide()
-    {
-        displayModi();
-        value += divide;
-        console.log(value);
         show();
     }
 
@@ -115,4 +117,5 @@ window.onload = function ()
     }
 
     show();
+    numPadSimilator();
 }
