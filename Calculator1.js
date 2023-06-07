@@ -33,17 +33,25 @@ window.onload = function ()
         {
             operatorNode[i].addEventListener("click", function appendd(e)
             {
-            value += e.target.innerHTML;
-            show();
+                function oneOperatorOnce()
+                {
+                        if (value[length] == "+" || value[length] == "-" || value[length] == "x" || value[length] == "÷")
+                        {
+                            value[length] = e.target.innerHTML;
+                        }
+                        else
+                        {
+                            value += e.target.innerHTML;
+                        }
+                }
+                oneOperatorOnce();
+                show();
             }
-
 )
-
-
         }
-
-
     }
+
+
 
 
     function oneDotOnly()
@@ -55,7 +63,7 @@ window.onload = function ()
             {
                 countDot +=1;
             }
-            if (value[i] === "+" || value[i] === "-" || value[i] === "*" || value[i] === "/")
+            if (value[i] === "+" || value[i] === "-" || value[i] === "x" || value[i] === "÷")
             {
                 if (countDot > 0)
                 {
