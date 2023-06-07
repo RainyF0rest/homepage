@@ -27,6 +27,25 @@ window.onload = function ()
         }
     }
 
+    function operatorSimulator()
+    {
+        for (var i = 0, n = operatorNode.length; i < n; i++ )
+        {
+            operatorNode[i].addEventListener("click", function appendd(e)
+            {
+            value += e.target.innerHTML;
+            show();
+            }
+
+)
+
+
+        }
+
+
+    }
+
+
     function oneDotOnly()
     {   
         var countDot = 0 ;
@@ -40,7 +59,7 @@ window.onload = function ()
             {
                 if (countDot > 0)
                 {
-                    counDot -= 1 ;
+                    countDot -= 1 ;
                 }
             }
 
@@ -100,14 +119,13 @@ window.onload = function ()
         show();
     }
 
-
-
     buttonClear.onclick = function clear()
     {
         value = "";
         show();
     }
 
+    //write sth turn x into * n so on .
     buttonEqual.onclick = function calculate()
     {
         ans = eval(value);
@@ -118,4 +136,5 @@ window.onload = function ()
 
     show();
     numPadSimilator();
+    operatorSimulator();
 }
