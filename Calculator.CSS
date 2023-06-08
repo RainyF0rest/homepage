@@ -1,0 +1,32 @@
+body
+{
+    background-color: black;
+    font-family:monospace;
+    width: 500px;
+    letter-spacing: 5px;
+    font-size: 1rem;
+
+}
+
+.cal
+{
+    border: solid rgb(0, 106, 255) 4px;
+    border-radius: 60%;
+    padding: 5px;
+    margin: 1px;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 1px;
+}
+#display {
+    border: solid rgb(0, 106, 255) 4px;
+    border-radius: 1px;
+    height: 60px;
+    padding-right: 15px;
+    padding-top: 10px;
+    text-align: right;
+    margin-right: 6px;
+    font-size: 2.5rem;
+    overflow-x: auto;
+    transition: all .2s ease-in-out;
+  }
