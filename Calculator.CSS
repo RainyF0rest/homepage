@@ -1,32 +1,95 @@
 body
 {
     background-color: black;
-    font-family:monospace;
-    width: 500px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:  rgb(47, 196, 230);
+    width: 380px;
     letter-spacing: 5px;
     font-size: 1rem;
+    margin: 5% 0 0 28%;
+    
 
+}
+h1
+{
+    margin:0 0 0 40% ;
 }
 
 .cal
 {
-    border: solid rgb(0, 106, 255) 4px;
-    border-radius: 60%;
-    padding: 5px;
-    margin: 1px;
+    border: solid rgb(47, 196, 230) 4px;
+    padding: 5px 0 5px 5px;
+    margin: 8% 0 0 8%;
     -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-    border-radius: 1px;
+    border-radius: 20px;
+    
 }
 #display {
-    border: solid rgb(0, 106, 255) 4px;
-    border-radius: 1px;
-    height: 60px;
-    padding-right: 15px;
-    padding-top: 10px;
+    border: solid rgb(47, 196, 230) 3px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: black;
+    color:  rgb(47, 196, 230);
+    border-radius: 20px;
+    height: 25%;
+    width : 68%;
+    padding: 10px;
     text-align: right;
-    margin-right: 6px;
+    margin : 6% 0 3% 10%;
     font-size: 2.5rem;
     overflow-x: auto;
     transition: all .2s ease-in-out;
+  }
+
+  button
+  {
+    border: solid rgb(47, 196, 230) 2px;
+    background-color: black;
+    color:  rgb(47, 196, 230);
+    border-radius: 30%;
+    padding: 3% 6% 3% 6%;
+    font-size: 200%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  .buttonBucket
+  {
+    padding: 0 0 0 10%;
+
+  }
+
+  .home
+  {
+    margin:10% 0 10% 35% ;
+    border-radius: 20px;
+  }
+  #minus
+  {
+    padding: 3% 6.5% 3% 6.5%;
+  }
+  #float
+  {
+    padding: 3% 6.5% 3% 6.5%;
+  }
+  #clear 
+  {
+    padding: 3% 38% 3% 38%;
+    border-radius: 35%;
+    margin: 3% 0 8% 0;
+    border-radius: 20px;
+  }
+ .line1
+  {
+    margin: 3% 0 0 0;
+  }
+  .line2
+  {
+    margin: 3% 0 0 0;
+  }
+  .line3
+  {
+    margin: 3% 0 0 0;
+  }
+  .line4
+  {
+    margin: 3% 0 0 0;
   }
