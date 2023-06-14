@@ -1,0 +1,30 @@
+body
+{
+    width: 1200px;
+    height: 850px;
+}
+h1
+{
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+	font-size: 3.2em;
+	color: #cb2026;
+	text-shadow: 1px 1px 1px #5a0b0d;
+    background-color: darksalmon;
+    padding: 2%;
+    margin: 0;
+}
+
+.instruction
+{
+    position: relative;
+    background-color: bisque;
+    width: 30%;
+    margin: 0 0 0 70%;
+    padding: 5%;
+}
+.catPic
+{
+    position: relative;
+    width: 65%;
+}
